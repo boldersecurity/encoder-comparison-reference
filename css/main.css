@@ -1,0 +1,50 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+.encoder-icons li {
+  float: left;
+  width: 25%;
+  height: 130px;
+  padding: 10px;
+  margin: 0 -1px -1px 0;
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: center;
+  border: 1px solid #ddd;
+  word-wrap: break-word; /* Help out IE10+ with class names */
+  display: block;
+  
+  background-color: #FFCACA; /* default inactive color */
+}
+
+.encoder-icons li:hover {
+  background-color: rgba(86,61,124,.1);
+}
+
+.encoder-icons li:hover {
+  background-color: rgba(86,61,124,.1);
+}
+
+.encoder-icons .encoder-icons-class {
+  text-align: center;
+  background-color: #99FF99;
+  word-wrap: break-word; /* Help out IE10+ with class names */
+}
+
+.encoder-icons .encoder-icons-code {
+  word-wrap: break-word; /* Help out IE10+ with class names */
+  font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+

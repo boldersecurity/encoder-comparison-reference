@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>HTML Encoder Comparison Reference Table</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width">
+
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <style>
+          body {
+              padding-top: 50px;
+              padding-bottom: 20px;
+          }
+      </style>
+      <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="css/main.css">
+
+      <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+
+      <!-- esapi4js dependencies -->
+      <script type="text/javascript" language="JavaScript" src="esapi4js/lib/log4js.js"></script>
+      <!-- esapi4js core -->
+      <script type="text/javascript" language="JavaScript" src="esapi4js/esapi.js"></script>
+      <!-- esapi4js i18n resources -->
+      <script type="text/javascript" language="JavaScript" src="esapi4js/resources/i18n/ESAPI_Standard_en_US.properties.js"></script>
+      <!-- esapi4js configuration -->
+      <script type="text/javascript" language="JavaScript" src="esapi4js/resources/Base.esapi.properties.js"></script>
+
+      <script type="text/javascript" language="JavaScript">
+          // Set any custom configuration options here or in an external js file that gets sourced in above.
+          Base.esapi.properties.logging['ApplicationLogger'] = {
+              Level: org.owasp.esapi.Logger.ALL,
+              Appenders: [ new Log4js.ConsoleAppender() ],
+              LogUrl: true,
+              LogApplicationName: true,
+              EncodingRequired: true
+          };
+
+          Base.esapi.properties.application.Name = "Encoder Comparison Reference";
+          // Initialize the api
+          org.owasp.esapi.ESAPI.initialize();
+      </script>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+      <script src="js/vendor/bootstrap.min.js"></script>
+
+      <script src="js/main.js"></script>
+
+      <script>
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src='//www.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+      </script>
+    </head>
+    <body>
+      <a href="https://github.com/boldersecurity/encoder-comparison-reference"><img style="position: absolute; top: 60px; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on Github"></a>
+      <div>
+      
+      </div>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+
+        <div class="navbar-header">
+          
+
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Encoder Comparison Reference</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">About this Project<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" target="_new">OWASP Project Page</a></li>
+                <li><a href="https://github.com/boldersecurity/encoder-comparison-reference" target="_new">Fork me on Github</a></li>
+                <li><a href="http://stephanietan.boldersecurity.com/" target="_new">Contact Me</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">About OWASP<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="https://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API" target="_new">Download ESAPI</a></li>
+                <li><a href="https://www.owasp.org/index.php/Main_Page" target="_new">Learn more about Security on OWASP</a></li>
+                <li><a href="https://www.owasp.org/index.php/Category:OWASP_Project" target="_new">Start an OWASP Project!</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <!--none-->
+
+
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Compare Encoders</h1>
+        <p>Libraries and frameworks encode ASCII characters differently. The OWASP Enterprise Security API (ESAPI) is the reference implementation for the most comprehensive and secure output encoding/escaping. Using this encoder comparison table, you will see how ESAPI exceeds other framework encoders and native encoders.</p>
+      
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <h2>Select Encoders</h2>
+          <p>Choose from this list of all ESAPI encoding methods and other popular framework and native encoders. We've chosen a few by default.</p>
+
+        </div>
+      </div>
+      <ul class="encoder-icons">
+        <li class="encoder-icons-class" onclick="toggleContent('ESAPIEncodeForHtml');" id="ESAPIEncodeForHtml">
+          <span class="glyphicon glyphicon-lock"></span><br />
+          ESAPI Encode for HTML<br />
+          <span class="encoder-icons-code">$ESAPI.encoder(). encodeForHTML</span>
+        </li>
+        <li class="encoder-icons-class" onclick="toggleContent('ESAPIEncodeForHtmlAttribute');" id="ESAPIEncodeForHtmlAttribute">
+          <span class="glyphicon glyphicon-lock"></span><br />
+          ESAPI Encode for HTML Attribute<br />
+          <span class="encoder-icons-code">$ESAPI.encoder(). encodeForHTMLAttribute</span>
+        </li>
+        <li class="encoder-icons-class" onclick="toggleContent('ESAPIEncodeForCSS');" id="ESAPIEncodeForCSS">
+          <span class="glyphicon glyphicon-lock"></span><br />
+          ESAPI Encode for CSS<br />
+          <span class="encoder-icons-code">$ESAPI.encoder(). encodeForCSS</span>
+        </li>
+        <li class="encoder-icons-class" onclick="toggleContent('ESAPIEncodeForJavaScript');" id="ESAPIEncodeForJavaScript">
+          <span class="glyphicon glyphicon-lock"></span><br />
+          ESAPI Encode for JavaScript<br />
+          <span class="encoder-icons-code">$ESAPI.encoder(). encodeForJavaScript</span>
+        </li>
+        <li class="encoder-icons-class" onclick="toggleContent('ESAPIEncodeForBase64');" id="ESAPIEncodeForBase64">
+          <span class="glyphicon glyphicon-lock"></span><br />
+          ESAPI Encode for Base64<br />
+          <span class="encoder-icons-code">$ESAPI.encoder(). encodeForBase64</span>
+        </li>
+        <li class="encoder-icons-class" onclick="toggleContent('ESAPIEncodeForURL');" id="ESAPIEncodeForURL">
+          <span class="glyphicon glyphicon-lock"></span><br />
+          ESAPI Encode for URL<br />
+          <span class="encoder-icons-code">$ESAPI.encoder(). encodeForURL</span>
+        </li>
+        <li class="encoder-icons-class" onclick="toggleContent('javascriptHtmlEncoded');" id="javascriptHtmlEncoded">
+          <span class="glyphicon glyphicon-asterisk"></span><br />
+          JavaScript HTML Encoder<br />
+          <span class="encoder-icons-code">.text(value).html()</span>
+        </li>
+        <li class="encoder-icons-class" onclick="toggleContent('javascriptEscaped');" id="javascriptEscaped">
+          <span class="glyphicon glyphicon-asterisk"></span><br />
+          JavaScript URL Escaped (Deprecated)<br />
+          <span class="encoder-icons-code">escape()</span>
+        </li>
+        <li class="encoder-icons-class" onclick="toggleContent('javascriptUriEncoded');" id="javascriptUriEncoded">
+          <span class="glyphicon glyphicon-asterisk"></span><br />
+          JavaScript URI Encoder<br />
+          <span class="encoder-icons-code">encodeUri()</span>
+        </li>
+        <li class="encoder-icons-class" onclick="toggleContent('javascriptUriEncodedComponent');" id="javascriptUriEncodedComponent">
+          <span class="glyphicon glyphicon-asterisk"></span><br />
+          JavaScript URI Encoder for Component<br />
+          <span class="encoder-icons-code">encodeUriComponent()</span>
+        </li>
+      </ul>
+
+      <!-- Table -->
+      <table class="table table-hover ascii-table">
+        <thead>
+          <tr>
+            <th>Char #</th>
+            <th>ASCII Char</th>
+            <th class="ESAPIEncodeForHtml">ESAPI Encode for HTML</th>
+            <th class="ESAPIEncodeForHtmlAttribute">ESAPI Encode for HTML Attribute</th>
+            <th class="ESAPIEncodeForCSS">ESAPI Encode for CSS</th>
+            <th class="ESAPIEncodeForJavaScript">ESAPI Encode for JavaScript</th>
+            <th class="ESAPIEncodeForBase64">ESAPI Encode for Base64</th>
+            <th class="ESAPIEncodeForURL">ESAPI Encode for URL</th>
+            <th class="javascriptHtmlEncoded">JavaScript HTML Encoder</th>
+            <th class="javascriptEscaped">JavaScript URL Escaped (Deprecated)</th>
+            <th class="javascriptUriEncoded">JavaScript URI Encoder</th>
+            <th class="javascriptUriEncodedComponent">JavaScript URI Encoder for Component</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <script>
+        function writeEncoding (className, encodedChar, i) {
+          //return "<td class='" + className + "-" + i + "'>" + $("<div/>").text(encodedChar).html() + "</td>";
+          return "<td class='" + className + "'>" + $("<div/>").text(encodedChar).html() + "</td>";
+        }
+
+        function renderAsciiTable () {
+          var asciiChar = 0;
+          var javascriptHtmlEncoded = 0;
+          var ESAPIEncodeForHtml = 0;
+          var ESAPIEncodeForHtmlAttribute = 0;
+          var ESAPIEncodeForCSS = 0;
+          var ESAPIEncodeForJavaScript = 0;
+          var ESAPIEncodeForBase64 = 0;
+          var ESAPIEncodeForURL = 0;
+          var javascriptEscaped = 0;
+          var javascriptUriEncoded = 0;
+          var javascriptUriEncodedComponent = 0;
+          var differencesHtmlStr = 0;
+          var differencesUrlStr = 0;
+
+          for ( var i = 0; i <= 255; i++ ) {
+            asciiChar = String.fromCharCode(i);
+            javascriptHtmlEncoded = $('<div/>').text(asciiChar).html();
+            ESAPIEncodeForHtml = $ESAPI.encoder().encodeForHTML(asciiChar);
+            ESAPIEncodeForHtmlAttribute = $ESAPI.encoder().encodeForHTMLAttribute(asciiChar);
+            ESAPIEncodeForCSS = $ESAPI.encoder().encodeForCSS(asciiChar);
+            ESAPIEncodeForJavaScript = $ESAPI.encoder().encodeForJavaScript(asciiChar);
+            ESAPIEncodeForBase64 = $ESAPI.encoder().encodeForBase64(asciiChar);
+            ESAPIEncodeForURL = $ESAPI.encoder().encodeForURL(asciiChar);
+            javascriptEscaped = escape(asciiChar);
+            javascriptUriEncoded = encodeURI(asciiChar);
+            javascriptUriEncodedComponent = encodeURIComponent(asciiChar);
+
+            jQuery(".ascii-table").append("<tr><td class='table-i'>" + 
+              i + "</td><td>" + 
+              String.fromCharCode(i) + "</td>" + 
+              writeEncoding ('ESAPIEncodeForHtml', ESAPIEncodeForHtml, i) +
+              writeEncoding ('ESAPIEncodeForHtmlAttribute', ESAPIEncodeForHtmlAttribute, i) +
+              writeEncoding ('ESAPIEncodeForCSS', ESAPIEncodeForCSS, i) +
+              writeEncoding ('ESAPIEncodeForJavaScript', ESAPIEncodeForJavaScript, i) +
+              writeEncoding ('ESAPIEncodeForBase64', ESAPIEncodeForBase64, i) +
+              writeEncoding ('ESAPIEncodeForURL', ESAPIEncodeForURL, i) +
+              writeEncoding ('javascriptHtmlEncoded', javascriptHtmlEncoded, i) +
+              writeEncoding ('javascriptEscaped', javascriptEscaped, i) +
+              writeEncoding ('javascriptUriEncoded', javascriptUriEncoded, i) +
+              writeEncoding ('javascriptUriEncodedComponent', javascriptUriEncodedComponent, i) + "</tr>");
+          }
+        }
+      
+        function toggleContent (className)
+        {
+          var displayStatus = jQuery("." + className).css("display");
+          var tableObject = jQuery("." + className);
+          var toggleObject = jQuery('#' + className);
+          var classTag = "encoder-icons-class";
+
+          if (displayStatus == "none"){
+            tableObject.show(); 
+            toggleObject.addClass(classTag);
+          }
+          else {
+            tableObject.hide();
+            toggleObject.removeClass(classTag);
+          }
+        }
+
+        jQuery("document").ready(function(){
+          renderAsciiTable();
+          toggleContent("javascriptHtmlEncoded"); // Start hidden
+          toggleContent("javascriptEscaped"); // Start hidden
+          toggleContent("javascriptUriEncoded"); // Start hidden
+          toggleContent("javascriptUriEncodedComponent"); // Start hidden
+        });
+      </script>
+
+      <footer>
+        <p>&copy; OWASP 2013</p>
+      </footer>
+    </div> <!-- /container -->        
+    
+    </body>
+</html>
