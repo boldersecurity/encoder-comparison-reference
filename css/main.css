@@ -3,18 +3,19 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
 .encoder-icons li {
   float: left;
-  width: 25%;
-  height: 130px;
+  width: 200px;
+  height: 90px;
   padding: 10px;
   margin: 0 -1px -1px 0;
-  font-size: 16px;
+  /*font-size: 16px;*/
   line-height: 1.4;
   text-align: center;
   border: 1px solid #ddd;
   word-wrap: break-word; /* Help out IE10+ with class names */
-  display: block;
+  list-style:none;
   
   background-color: #FFCACA; /* default inactive color */
 }
